@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+        <link rel="icon" type="image/png" href="{% static "assets/img/1.jpg" %}">
+
+        <title>Omar Reda</title>
+        <!-- font awesome icons cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+        <!-- swiper slider css file -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA==" crossorigin="anonymous" />
+
+        <!-- custom style.css file -->
+        <link rel="stylesheet" href="{% static 'assets2/assets/style.css' %}">
+    </head>
+    <body>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="{% url 'home' %}" class="nav__logo"><span style="background:#BC3D1C;color:#fff;padding:2px;font-size:18px;margin-right:2px">O</span>MAR</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="{% url 'home' %}" class="nav__link ">Home</a></li>
+                        <li class="nav__item"><a href="{% url 'blog:blog' %}" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link active-link">Details</a></li>
+                        <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+          <article class="article" style="margin-bottom:20px">
+              <div class="card">
+                  <div class="overflow-img">
+
+                          <img src="{{ bloggg.image.url }}" class="img-fluid img-thumbnail" alt="" style="max-width: 100%; height:auto">
+
+                  </div>
+                  <div class="card-body text-center px-1">
+
+                          {{ bloggg.descrip }}
+
+                      <p class="secondary-title text-secondary display-3">
+                          <span><i class="far fa-clock text-primary">&nbsp; </i> {{ bloggg.date|date:'d M Y'|upper}}</span>
+
+                      </p>
+                  </div>
+              </div>
+            </article>
+        </div>
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container ">
+            <p class="footer__copy">&#169; 2021 Omar. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        <!-- masonry libray for horizontal grid -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous"></script>
+
+        <!-- swiper slider cdn -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js" integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA==" crossorigin="anonymous"></script>
+
+        <!-- custom javascript main.js file -->
+        <script src="{% static 'assets2/assets/main.js' %}"></script>
+    </body>
+</html>
