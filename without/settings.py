@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'htd9&h&!twi7kro-=nl(sx$%kwr-v1ux8=zbj*2ja6%@3@l=e)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['omarreda.pythonanywhere.com']
 
 
 # Application definition
